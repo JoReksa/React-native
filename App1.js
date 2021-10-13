@@ -135,7 +135,7 @@ export default class App1 extends Component {
               </View>
             </View>
           </View>
-          {/* line tengah */}
+          {/* line tengah 2 */}
           <View style={{padding: 10}}>
             <View
               style={{
