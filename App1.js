@@ -1,9 +1,62 @@
 import React, {Component} from 'react';
-import {View, Text, Button} from 'react-native';
+import {View, Text, Button, FlatList, SafeAreaView, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
+const DATA = [
+  {
+    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+    title: 'First Item',
+  },
+  {
+    id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+    title: 'Second Item',
+  },
+  {
+    id: '58694a0f-3da1-471f-bd96-145571e29d72',
+    title: 'Third Item',
+  },
+  {
+    id: '52694a0f-3da1-471f-bd96-145571e29d72',
+    title: 'Fourth Item',
+  },
+];
 
 export default class App1 extends Component {
   render() {
+    const Item = ({title}) => (
+      <View>
+        <Text>{title}</Text>
+      </View>
+    );
+
+    const renderItem = ({item}) => (
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          marginHorizontal: 10,
+          borderBottomWidth: 1,
+          backgroundColor: '#fff',
+          height: 50,
+        }}>
+        <View>
+          <View style={{}}>
+            <Text style={{fontWeight: 'bold', color: 'black'}}>
+              Gopay Top Up {item.title}
+            </Text>
+            <Text style={{fontWeight: 'bold', color: 'blue'}}>
+              #28829123344
+            </Text>
+            <Text style={{fontSize: 10}}>9 Apr.09.00PM</Text>
+          </View>
+        </View>
+        <View style={{flexDirection: 'row'}}>
+          <Text style={{fontWeight: 'bold', color: 'green'}}>Rp.</Text>
+          <Text style={{fontSize: 24, color: 'green', fontWeight: 'bold'}}>
+            51.000
+          </Text>
+        </View>
+      </View>
+    );
     return (
       <View
         style={{
@@ -14,28 +67,62 @@ export default class App1 extends Component {
         }}>
         <View>
           {/* line atas */}
-          <View
-            style={{backgroundColor: 'skyblue', height: 150, borderRadius: 20}}>
+          <View>
             <View
               style={{
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                padding: 10,
+                backgroundColor: 'skyblue',
+                height: 130,
+                borderRadius: 20,
               }}>
-              <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                <Icon name="left" size={30} color="white" />
-                <Icon name="wallet" size={20} color="white" />
-                <Text
-                  style={{
-                    fontSize: 20,
-                    fontWeight: 'bold',
-                    width: 100,
-                    color: 'black',
-                  }}>
-                  Gopay
-                </Text>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  padding: 10,
+                }}>
+                <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                  <Icon name="left" size={30} color="white" />
+                  <Icon
+                    name="wallet"
+                    size={20}
+                    color="white"
+                    style={{marginLeft: 10}}
+                  />
+                  <Text
+                    style={{
+                      fontSize: 20,
+                      fontWeight: 'bold',
+                      width: 100,
+                      color: 'black',
+                      marginLeft: 10,
+                    }}>
+                    Gopay
+                  </Text>
+                </View>
+                <View>
+                  <Icon name="ellipsis1" size={30} color="white" />
+                </View>
               </View>
-              <Icon name="ellipsis1" size={30} color="white" />
+              <View style={{flexDirection: 'row'}}>
+                <Image
+                  style={{
+                    height: 50,
+                    width: 50,
+                    marginLeft: 50,
+                    marginTop: 10,
+                    borderRadius: 20,
+                  }}
+                  source={require('/Users/itmudah/AwesomeProject/pp1.jpeg')}></Image>
+                <View style={{marginLeft: 10, marginTop: 15}}>
+                  <Text
+                    style={{fontSize: 20, fontWeight: 'bold', color: 'black'}}>
+                    Scrwm
+                  </Text>
+                  <Text style={{fontSize: 10}}>
+                    Tap to see your Gojek profile
+                  </Text>
+                </View>
+              </View>
             </View>
           </View>
           {/* line tengah */}
@@ -222,89 +309,122 @@ export default class App1 extends Component {
             </View>
           </View>
         </View>
-
-        {/* line bawah */}
-        <View style={{height: 60, backgroundColor: 'silver'}}>
+        {/* line pp bawah */}
+        <View>
           <View
             style={{
-              flexDirection: 'row',
-              justifyContent: 'space-evenly',
-              alignItems: 'stretch',
+              backgroundColor: 'white',
+              height: 140,
+              borderRadius: 20,
+              margin: 5,
+              padding: 7,
+              borderWidth: 1,
+              marginTop: -25,
             }}>
-            <Icon
-              name="home"
-              size={30}
-              color="white"
-              style={{left: 40, top: 5}}
-            />
-            <Text
-              style={{
-                fontSize: 12,
-                fontWeight: 'bold',
-                width: 100,
-                color: 'black',
-                top: 40,
-                left: 20,
-                textAlign: 'left',
-              }}>
-              Home
-            </Text>
-            <Icon
-              name="appstore1"
-              size={30}
-              color="white"
-              style={{left: 40, top: 5}}
-            />
-            <Text
-              style={{
-                fontSize: 12,
-                fontWeight: 'bold',
-                width: 100,
-                color: 'black',
-                top: 40,
-                left: 16,
-                textAlign: 'left',
-              }}>
-              Activity
-            </Text>
-            <Icon
-              name="mail"
-              size={30}
-              color="white"
-              style={{left: 40, top: 5}}
-            />
-            <Text
-              style={{
-                fontSize: 12,
-                fontWeight: 'bold',
-                width: 100,
-                color: 'black',
-                top: 40,
-                left: 24,
-                textAlign: 'left',
-              }}>
-              Chat
-            </Text>
-            <Icon
-              name="user"
-              size={30}
-              color="white"
-              style={{left: 40, top: 5}}
-            />
-            <Text
-              style={{
-                fontSize: 12,
-                fontWeight: 'bold',
-                width: 100,
-                color: 'black',
-                top: 40,
-                left: 20,
-                textAlign: 'left',
-              }}>
-              Profile
-            </Text>
+            <View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-evenly',
+                  margin: 2,
+                }}>
+                <View>
+                  <Text style={{fontWeight: 'bold', color: 'black'}}>
+                    Gopay Friends
+                  </Text>
+                  <Text style={{color: 'black'}}>
+                    These are who you last sent or request Gopay to.
+                  </Text>
+                  <Text style={{color: 'black'}}>
+                    Tap their name to send again
+                  </Text>
+                </View>
+                <View style={{}}>
+                  <Text style={{color: 'green', fontWeight: 'bold'}}>
+                    See more
+                  </Text>
+                </View>
+                {/* line gambar */}
+              </View>
+            </View>
+            <View>
+              <View style={{flexDirection: 'row'}}>
+                <Image
+                  style={{
+                    height: 45,
+                    width: 45,
+                    marginLeft: 10,
+                    marginTop: 5,
+                    borderRadius: 20,
+                  }}
+                  source={require('/Users/itmudah/AwesomeProject/pp1.jpeg')}></Image>
+                <Image
+                  style={{
+                    height: 45,
+                    width: 45,
+                    marginLeft: 10,
+                    marginTop: 5,
+                    borderRadius: 20,
+                  }}
+                  source={require('/Users/itmudah/AwesomeProject/pp1.jpeg')}></Image>
+                <Image
+                  style={{
+                    height: 45,
+                    width: 45,
+                    marginLeft: 10,
+                    marginTop: 5,
+                    borderRadius: 20,
+                  }}
+                  source={require('/Users/itmudah/AwesomeProject/pp1.jpeg')}></Image>
+              </View>
+              <View style={{flexDirection: 'row', marginHorizontal: 10}}>
+                <Text
+                  style={{
+                    fontWeight: 'bold',
+                    color: 'black',
+                  }}>
+                  Hardi
+                </Text>
+                <Text
+                  style={{
+                    fontWeight: 'bold',
+                    color: 'black',
+                    marginLeft: 25,
+                  }}>
+                  Santo
+                </Text>
+                <Text
+                  style={{
+                    fontWeight: 'bold',
+                    color: 'black',
+                    marginLeft: 19,
+                  }}>
+                  Harley
+                </Text>
+              </View>
+            </View>
           </View>
         </View>
+        {/* line scroll */}
+        <View style={{}}>
+          <Text
+            style={{
+              marginHorizontal: 20,
+              fontWeight: 'bold',
+              color: 'black',
+              fontSize: 17,
+            }}>
+            History
+          </Text>
+          <SafeAreaView style={{height: 100, marginHorizontal: 10}}>
+            <FlatList
+              data={DATA}
+              renderItem={renderItem}
+              keyExtractor={item => item.id}
+            />
+          </SafeAreaView>
+        </View>
+        {/* line bawah */}
       </View>
     );
   }
