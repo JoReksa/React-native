@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {View, Text, Button, FlatList, SafeAreaView, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
+import Ent from 'react-native-vector-icons/Entypo';
+import Fa5 from 'react-native-vector-icons/FontAwesome5';
 const DATA = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
@@ -27,31 +29,35 @@ export default class App1 extends Component {
         <Text>{title}</Text>
       </View>
     );
-
     const renderItem = ({item}) => (
       <View
         style={{
           flexDirection: 'row',
           justifyContent: 'space-between',
           marginHorizontal: 10,
-          borderBottomWidth: 1,
-          backgroundColor: '#fff',
-          height: 50,
+          borderBottomWidth: 0.5,
+          height: 55,
         }}>
         <View>
           <View style={{}}>
-            <Text style={{fontWeight: 'bold', color: 'black'}}>
-              Gopay Top Up {item.title}
+            <Text
+              style={{
+                fontWeight: '600',
+                color: 'black',
+                marginBottom: 2,
+                fontSize: 12,
+              }}>
+              GoPay Top Up
             </Text>
-            <Text style={{fontWeight: 'bold', color: 'blue'}}>
+            <Text style={{fontWeight: '600', color: 'green', marginBottom: 2}}>
               #28829123344
             </Text>
-            <Text style={{fontSize: 10}}>9 Apr.09.00PM</Text>
+            <Text style={{fontSize: 10, marginBottom: 2}}>9 Apr.09.00PM</Text>
           </View>
         </View>
         <View style={{flexDirection: 'row'}}>
-          <Text style={{fontWeight: 'bold', color: 'green'}}>Rp.</Text>
-          <Text style={{fontSize: 24, color: 'green', fontWeight: 'bold'}}>
+          <Text style={{fontWeight: '600', color: 'green'}}>Rp.</Text>
+          <Text style={{fontSize: 15, color: 'green', fontWeight: '400'}}>
             51.000
           </Text>
         </View>
@@ -64,43 +70,93 @@ export default class App1 extends Component {
           flexDirection: 'column',
           justifyContent: 'space-between',
           padding: 10,
+          backgroundColor: 'white',
         }}>
-        <View>
+        <View style={{}}>
           {/* line atas */}
           <View>
             <View
               style={{
-                backgroundColor: 'skyblue',
+                backgroundColor: 'rgba(139,195,74,1)',
                 height: 130,
                 borderRadius: 20,
               }}>
               <View
                 style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  position: 'absolute',
+                  height: 40,
+                  width: 40,
+                  borderRadius: 20,
+                  left: -10,
+                  top: -5,
+                }}
+              />
+              <View
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  position: 'absolute',
+                  height: 40,
+                  width: 40,
+                  borderRadius: 20,
+                  left: -10,
+                  top: 100,
+                }}
+              />
+              <View
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  position: 'absolute',
+                  height: 40,
+                  width: 40,
+                  borderRadius: 20,
+                  left: 310,
+                  top: 60,
+                }}
+              />
+              <View
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  position: 'absolute',
+                  height: 80,
+                  width: 80,
+                  borderRadius: 40,
+                  left: 150,
+                  top: -40,
+                }}
+              />
+              <View
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  position: 'absolute',
+                  height: 80,
+                  width: 80,
+                  borderRadius: 40,
+                  left: 310,
+                }}
+              />
+              <View
+                style={{
                   flexDirection: 'row',
                   justifyContent: 'space-between',
-                  padding: 10,
+                  margin: 10,
                 }}>
                 <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                  <Icon name="left" size={30} color="white" />
-                  <Icon
-                    name="wallet"
-                    size={20}
-                    color="white"
-                    style={{marginLeft: 10}}
-                  />
+                  <Ent name="chevron-left" size={35} color="white" />
+                  <Ent name="wallet" size={25} color="dodgerblue" style={{}} />
                   <Text
                     style={{
                       fontSize: 20,
-                      fontWeight: 'bold',
+                      fontWeight: '600',
                       width: 100,
-                      color: 'black',
+                      color: 'white',
                       marginLeft: 10,
                     }}>
                     Gopay
                   </Text>
                 </View>
-                <View>
-                  <Icon name="ellipsis1" size={30} color="white" />
+                <View style={{margin: 10}}>
+                  <Ent name="dots-three-horizontal" size={20} color="white" />
                 </View>
               </View>
               <View style={{flexDirection: 'row'}}>
@@ -108,17 +164,18 @@ export default class App1 extends Component {
                   style={{
                     height: 50,
                     width: 50,
-                    marginLeft: 50,
-                    marginTop: 10,
-                    borderRadius: 20,
+                    marginLeft: 40,
+                    marginTop: 0,
+                    borderRadius: 40,
                   }}
                   source={require('/Users/itmudah/AwesomeProject/pp1.jpeg')}></Image>
-                <View style={{marginLeft: 10, marginTop: 15}}>
+                <View style={{marginLeft: 10, marginTop: 5}}>
                   <Text
-                    style={{fontSize: 20, fontWeight: 'bold', color: 'black'}}>
+                    style={{fontSize: 15, fontWeight: '600', color: 'white'}}>
                     Scrwm
                   </Text>
-                  <Text style={{fontSize: 10}}>
+                  <Text
+                    style={{fontSize: 9, fontWeight: '600', color: 'white'}}>
                     Tap to see your Gojek profile
                   </Text>
                 </View>
@@ -126,7 +183,7 @@ export default class App1 extends Component {
             </View>
           </View>
           {/* line tengah */}
-          <View style={{padding: 10}}>
+          <View style={{padding: 10, marginTop: 10}}>
             <View
               style={{
                 flexDirection: 'row',
@@ -135,21 +192,21 @@ export default class App1 extends Component {
               <View style={{alignItems: 'center'}}>
                 <View
                   style={{
-                    width: 60,
-                    height: 60,
-                    backgroundColor: 'skyblue',
+                    width: 45,
+                    height: 45,
+                    backgroundColor: 'rgba(139,195,74,1)',
                     justifyContent: 'center',
                     alignItems: 'center',
                     borderRadius: 30,
                   }}>
-                  <Icon name="upsquare" size={30} color="white"></Icon>
+                  <Fa5 name="arrow-circle-up" size={22} color="white" />
                 </View>
                 <Text
                   style={{
-                    fontSize: 17,
+                    fontSize: 12,
                     fontWeight: 'bold',
-
-                    color: 'black',
+                    marginTop: 4,
+                    color: 'darkgrey ',
                   }}>
                   Pay
                 </Text>
@@ -158,20 +215,21 @@ export default class App1 extends Component {
               <View style={{alignItems: 'center'}}>
                 <View
                   style={{
-                    width: 60,
-                    height: 60,
-                    backgroundColor: 'skyblue',
+                    width: 45,
+                    height: 45,
+                    backgroundColor: 'rgba(139,195,74,1)',
                     justifyContent: 'center',
                     alignItems: 'center',
                     borderRadius: 30,
                   }}>
-                  <Icon name="plussquareo" size={30} color="white"></Icon>
+                  <Ent name="squared-plus" size={22} color="white" />
                 </View>
                 <Text
                   style={{
-                    fontSize: 17,
+                    fontSize: 12,
                     fontWeight: 'bold',
-                    color: 'black',
+                    marginTop: 4,
+                    color: 'darkgrey ',
                   }}>
                   Top Up
                 </Text>
@@ -180,20 +238,21 @@ export default class App1 extends Component {
               <View style={{alignItems: 'center'}}>
                 <View
                   style={{
-                    width: 60,
-                    height: 60,
-                    backgroundColor: 'skyblue',
+                    width: 45,
+                    height: 45,
+                    backgroundColor: 'rgba(139,195,74,1)',
                     justifyContent: 'center',
                     alignItems: 'center',
                     borderRadius: 30,
                   }}>
-                  <Icon name="downsquare" size={30} color="white"></Icon>
+                  <Fa5 name="arrow-circle-down" size={22} color="white" />
                 </View>
                 <Text
                   style={{
-                    fontSize: 17,
+                    fontSize: 12,
                     fontWeight: 'bold',
-                    color: 'black',
+                    marginTop: 4,
+                    color: 'darkgrey ',
                   }}>
                   Request
                 </Text>
@@ -202,20 +261,21 @@ export default class App1 extends Component {
               <View style={{alignItems: 'center'}}>
                 <View
                   style={{
-                    width: 60,
-                    height: 60,
-                    backgroundColor: 'skyblue',
+                    width: 45,
+                    height: 45,
+                    backgroundColor: 'rgba(139,195,74,1)',
                     justifyContent: 'center',
                     alignItems: 'center',
                     borderRadius: 30,
                   }}>
-                  <Icon name="dingding-o" size={30} color="white"></Icon>
+                  <Ent name="paper-plane" size={22} color="white" />
                 </View>
                 <Text
                   style={{
-                    fontSize: 17,
+                    fontSize: 12,
                     fontWeight: 'bold',
-                    color: 'black',
+                    marginTop: 4,
+                    color: 'darkgrey ',
                   }}>
                   Pay Later
                 </Text>
@@ -223,7 +283,7 @@ export default class App1 extends Component {
             </View>
           </View>
           {/* line tengah 2 */}
-          <View style={{padding: 10}}>
+          <View style={{padding: 10, marginTop: -5}}>
             <View
               style={{
                 flexDirection: 'row',
@@ -232,21 +292,21 @@ export default class App1 extends Component {
               <View style={{alignItems: 'center'}}>
                 <View
                   style={{
-                    width: 60,
-                    height: 60,
-                    backgroundColor: 'skyblue',
+                    width: 45,
+                    height: 45,
+                    backgroundColor: 'rgba(139,195,74,1)',
                     justifyContent: 'center',
                     alignItems: 'center',
                     borderRadius: 30,
                   }}>
-                  <Icon name="star" size={30} color="white"></Icon>
+                  <Fa5 name="hand-holding-usd" size={22} color="white" />
                 </View>
                 <Text
                   style={{
-                    fontSize: 17,
+                    fontSize: 12,
                     fontWeight: 'bold',
-
-                    color: 'black',
+                    marginTop: 4,
+                    color: 'darkgrey ',
                   }}>
                   Cash Out
                 </Text>
@@ -255,20 +315,21 @@ export default class App1 extends Component {
               <View style={{alignItems: 'center'}}>
                 <View
                   style={{
-                    width: 60,
-                    height: 60,
-                    backgroundColor: 'skyblue',
+                    width: 45,
+                    height: 45,
+                    backgroundColor: 'rgba(139,195,74,1)',
                     justifyContent: 'center',
                     alignItems: 'center',
                     borderRadius: 30,
                   }}>
-                  <Icon name="wallet" size={30} color="white"></Icon>
+                  <Fa5 name="wallet" size={22} color="white" />
                 </View>
                 <Text
                   style={{
-                    fontSize: 17,
+                    fontSize: 12,
                     fontWeight: 'bold',
-                    color: 'black',
+                    marginTop: 4,
+                    color: 'darkgrey ',
                   }}>
                   Plus
                 </Text>
@@ -277,78 +338,105 @@ export default class App1 extends Component {
               <View style={{alignItems: 'center'}}>
                 <View
                   style={{
-                    width: 60,
-                    height: 60,
-                    backgroundColor: 'skyblue',
+                    width: 45,
+                    height: 45,
+                    backgroundColor: 'rgba(139,195,74,1)',
                     justifyContent: 'center',
                     alignItems: 'center',
                     borderRadius: 30,
                   }}>
-                  <Icon name="aliwangwang-o1" size={30} color="white"></Icon>
+                  <Fa5 name="money-bill-wave" size={22} color="white" />
                 </View>
                 <Text
                   style={{
-                    fontSize: 17,
+                    fontSize: 12,
                     fontWeight: 'bold',
-                    color: 'black',
+                    marginTop: 4,
+                    color: 'darkgrey ',
                   }}>
-                  Go Tagihan
+                  Tagihan
                 </Text>
               </View>
               <View style={{alignItems: 'center'}}>
                 <View
                   style={{
-                    width: 60,
-                    height: 60,
+                    width: 50,
+                    height: 50,
 
                     justifyContent: 'center',
                     alignItems: 'center',
                     borderRadius: 30,
-                  }}></View>
+                  }}
+                />
+                <Text
+                  style={{
+                    fontSize: 14,
+                    fontWeight: 'bold',
+                    color: 'black',
+                  }}></Text>
               </View>
             </View>
           </View>
         </View>
         {/* line pp bawah */}
-        <View>
+        <View style={{}}>
           <View
             style={{
               backgroundColor: 'white',
-              height: 140,
               borderRadius: 20,
               margin: 5,
               padding: 7,
-              borderWidth: 1,
-              marginTop: -25,
+              borderWidth: 1.5,
+              borderColor: 'rgba(139,195,74,1)',
+              marginTop: 5,
             }}>
-            <View>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  justifyContent: 'space-evenly',
-                  margin: 2,
-                }}>
-                <View>
-                  <Text style={{fontWeight: 'bold', color: 'black'}}>
-                    Gopay Friends
-                  </Text>
-                  <Text style={{color: 'black'}}>
-                    These are who you last sent or request Gopay to.
-                  </Text>
-                  <Text style={{color: 'black'}}>
-                    Tap their name to send again
-                  </Text>
-                </View>
-                <View style={{}}>
-                  <Text style={{color: 'green', fontWeight: 'bold'}}>
-                    See more
-                  </Text>
-                </View>
-                {/* line gambar */}
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                paddingHorizontal: 10,
+              }}>
+              <View style={{flex: 1}}>
+                <Text
+                  style={{
+                    fontWeight: 'bold',
+                    color: 'black',
+                    fontSize: 14,
+                  }}>
+                  Gopay Friends
+                </Text>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontWeight: '600',
+                    fontSize: 10,
+                  }}>
+                  These are who you last sent or request Gopay to.
+                </Text>
+                <Text
+                  style={{
+                    color: 'black',
+                    fontWeight: '600',
+                    fontSize: 10,
+                  }}>
+                  Tap their name to send again
+                </Text>
               </View>
+              <View style={{}}>
+                <Text
+                  style={{
+                    color: 'green',
+                    fontWeight: '600',
+                    fontSize: 12,
+                  }}>
+                  See more
+                </Text>
+              </View>
+              {/* line gambar */}
             </View>
+
             <View>
-              <View style={{flexDirection: 'row'}}>
+              <View style={{flexDirection: 'row', marginTop: 10}}>
                 <Image
                   style={{
                     height: 45,
@@ -380,24 +468,28 @@ export default class App1 extends Component {
               <View style={{flexDirection: 'row', marginHorizontal: 10}}>
                 <Text
                   style={{
-                    fontWeight: 'bold',
+                    fontWeight: '600',
                     color: 'black',
+                    fontSize: 12,
+                    marginLeft: 10,
                   }}>
                   Hardi
                 </Text>
                 <Text
                   style={{
-                    fontWeight: 'bold',
+                    fontWeight: '600',
                     color: 'black',
+                    fontSize: 12,
                     marginLeft: 25,
                   }}>
                   Santo
                 </Text>
                 <Text
                   style={{
-                    fontWeight: 'bold',
+                    fontWeight: '600',
                     color: 'black',
                     marginLeft: 19,
+                    fontSize: 12,
                   }}>
                   Harley
                 </Text>
@@ -406,25 +498,38 @@ export default class App1 extends Component {
           </View>
         </View>
         {/* line scroll */}
-        <View style={{}}>
-          <Text
-            style={{
-              marginHorizontal: 20,
-              fontWeight: 'bold',
-              color: 'black',
-              fontSize: 17,
-            }}>
-            History
-          </Text>
-          <SafeAreaView style={{height: 100, marginHorizontal: 10}}>
-            <FlatList
-              data={DATA}
-              renderItem={renderItem}
-              keyExtractor={item => item.id}
-            />
-          </SafeAreaView>
+        <View>
+          <View style={{marginTop: 7}}>
+            <Text
+              style={{
+                marginHorizontal: 20,
+                fontWeight: 'bold',
+                color: 'black',
+                fontSize: 15,
+                marginBottom: 5,
+              }}>
+              History
+            </Text>
+            <View style={{height: 100, marginHorizontal: 5}}>
+              <FlatList
+                data={DATA}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
+              />
+            </View>
+          </View>
         </View>
         {/* line bawah */}
+        <View>
+          <View
+            style={{
+              backgroundColor: 'rgba(255,255,10) ',
+              height: 50,
+              margin: 0,
+            }}>
+            <View></View>
+          </View>
+        </View>
       </View>
     );
   }
