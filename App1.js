@@ -3,6 +3,8 @@ import {View, Text, Button, FlatList, SafeAreaView, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Ent from 'react-native-vector-icons/Entypo';
 import Fa5 from 'react-native-vector-icons/FontAwesome5';
+import ACT from 'react-native-vector-icons/Feather';
+import Evil from 'react-native-vector-icons/EvilIcons';
 const DATA = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
@@ -229,7 +231,6 @@ export default class App1 extends Component {
                     fontSize: 12,
                     fontWeight: 'bold',
                     marginTop: 4,
-                    color: 'darkgrey ',
                   }}>
                   Top Up
                 </Text>
@@ -510,7 +511,7 @@ export default class App1 extends Component {
               }}>
               History
             </Text>
-            <View style={{height: 100, marginHorizontal: 5}}>
+            <View style={{height: 55, marginHorizontal: 10, marginBottom: 5}}>
               <FlatList
                 data={DATA}
                 renderItem={renderItem}
@@ -523,11 +524,54 @@ export default class App1 extends Component {
         <View>
           <View
             style={{
-              backgroundColor: 'rgba(255,255,10) ',
+              backgroundColor: 'white',
               height: 50,
               margin: 0,
             }}>
-            <View></View>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-around',
+                padding: 5,
+                margin: 5,
+              }}>
+              <View>
+                <Icon name="home" size={22} color="seagreen" />
+                <View>
+                  <Text
+                    style={{fontSize: 9, fontWeight: '600', color: 'black'}}>
+                    Home
+                  </Text>
+                </View>
+              </View>
+              <View>
+                <ACT name="activity" size={22} color="seagreen" />
+                <View>
+                  <Text
+                    style={{fontSize: 9, fontWeight: '600', color: 'black'}}>
+                    Activity
+                  </Text>
+                </View>
+              </View>
+              <View>
+                <Ent name="chat" size={22} color="seagreen" />
+                <View>
+                  <Text
+                    style={{fontSize: 9, fontWeight: '600', color: 'black'}}>
+                    Chat
+                  </Text>
+                </View>
+              </View>
+              <View>
+                <Evil name="user" size={30} color="seagreen" />
+                <View>
+                  <Text
+                    style={{fontSize: 9, fontWeight: '600', color: 'black'}}>
+                    Profile
+                  </Text>
+                </View>
+              </View>
+            </View>
           </View>
         </View>
       </View>
