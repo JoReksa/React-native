@@ -173,7 +173,11 @@ export default class App1 extends Component {
                   source={require('/Users/itmudah/AwesomeProject/pp1.jpeg')}></Image>
                 <View style={{marginLeft: 10, marginTop: 5}}>
                   <Text
-                    style={{fontSize: 15, fontWeight: '600', color: 'white'}}>
+                    style={{
+                      fontSize: 15,
+                      fontFamily: 'Tbold',
+                      color: 'white',
+                    }}>
                     Scrwm
                   </Text>
                   <Text

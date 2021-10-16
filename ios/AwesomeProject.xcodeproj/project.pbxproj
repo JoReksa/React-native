@@ -30,6 +30,13 @@
 		1992052B0EBF41448900123C /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BE8668A0DFA467FAA0EC403 /* Octicons.ttf */; };
 		E1D9CD0A6BE642169C1F7B9F /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19E5F48C8D0743B3BAFBBEEF /* SimpleLineIcons.ttf */; };
 		709EBE120B0D4621BF6BB388 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73FDDCE60303472592DB32EB /* Zocial.ttf */; };
+		981C34FAD9D44B2C903B4F6D /* North.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20C87CC1E479409E91F9C10F /* North.ttf */; };
+		BF7C424BB2CB4C789B58EF8A /* TAHOMA_0.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 446E82FEE52848AAAAF323B7 /* TAHOMA_0.TTF */; };
+		AB3EF5C37E5140F69E59512B /* TAHOMAB.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 6EF018BE1BFB42C290676F85 /* TAHOMAB.TTF */; };
+		A4667E24D0734BE7B082EBF0 /* TAHOMABD.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D67CE3191CFD4A92AF54F1AB /* TAHOMABD.TTF */; };
+		29EFB7E6D51A4435BE32C43E /* TahomaR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52A6B6C5454E446F8296116A /* TahomaR.ttf */; };
+		B6F2678EE76F4659B7078866 /* RobotoB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3AFFDF3E336440269E6ADF75 /* RobotoB.ttf */; };
+		5F8408C16E084FBABF614A0B /* Tbold.TTF in Resources */ = {isa = PBXBuildFile; fileRef = FD2A9609B0024451A5F6D24B /* Tbold.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +83,13 @@
 		5BE8668A0DFA467FAA0EC403 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		19E5F48C8D0743B3BAFBBEEF /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		73FDDCE60303472592DB32EB /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		20C87CC1E479409E91F9C10F /* North.ttf */ = {isa = PBXFileReference; name = "North.ttf"; path = "../Tahoma/North.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		446E82FEE52848AAAAF323B7 /* TAHOMA_0.TTF */ = {isa = PBXFileReference; name = "TAHOMA_0.TTF"; path = "../Tahoma/TAHOMA_0.TTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6EF018BE1BFB42C290676F85 /* TAHOMAB.TTF */ = {isa = PBXFileReference; name = "TAHOMAB.TTF"; path = "../Tahoma/TAHOMAB.TTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D67CE3191CFD4A92AF54F1AB /* TAHOMABD.TTF */ = {isa = PBXFileReference; name = "TAHOMABD.TTF"; path = "../Tahoma/TAHOMABD.TTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		52A6B6C5454E446F8296116A /* TahomaR.ttf */ = {isa = PBXFileReference; name = "TahomaR.ttf"; path = "../Tahoma/TahomaR.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3AFFDF3E336440269E6ADF75 /* RobotoB.ttf */ = {isa = PBXFileReference; name = "RobotoB.ttf"; path = "../Tahoma/RobotoB.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FD2A9609B0024451A5F6D24B /* Tbold.TTF */ = {isa = PBXFileReference; name = "Tbold.TTF"; path = "../Tahoma/Tbold.TTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +215,13 @@
 				5BE8668A0DFA467FAA0EC403 /* Octicons.ttf */,
 				19E5F48C8D0743B3BAFBBEEF /* SimpleLineIcons.ttf */,
 				73FDDCE60303472592DB32EB /* Zocial.ttf */,
+				20C87CC1E479409E91F9C10F /* North.ttf */,
+				446E82FEE52848AAAAF323B7 /* TAHOMA_0.TTF */,
+				6EF018BE1BFB42C290676F85 /* TAHOMAB.TTF */,
+				D67CE3191CFD4A92AF54F1AB /* TAHOMABD.TTF */,
+				52A6B6C5454E446F8296116A /* TahomaR.ttf */,
+				3AFFDF3E336440269E6ADF75 /* RobotoB.ttf */,
+				FD2A9609B0024451A5F6D24B /* Tbold.TTF */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -318,6 +339,13 @@
 				1992052B0EBF41448900123C /* Octicons.ttf in Resources */,
 				E1D9CD0A6BE642169C1F7B9F /* SimpleLineIcons.ttf in Resources */,
 				709EBE120B0D4621BF6BB388 /* Zocial.ttf in Resources */,
+				981C34FAD9D44B2C903B4F6D /* North.ttf in Resources */,
+				BF7C424BB2CB4C789B58EF8A /* TAHOMA_0.TTF in Resources */,
+				AB3EF5C37E5140F69E59512B /* TAHOMAB.TTF in Resources */,
+				A4667E24D0734BE7B082EBF0 /* TAHOMABD.TTF in Resources */,
+				29EFB7E6D51A4435BE32C43E /* TahomaR.ttf in Resources */,
+				B6F2678EE76F4659B7078866 /* RobotoB.ttf in Resources */,
+				5F8408C16E084FBABF614A0B /* Tbold.TTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
