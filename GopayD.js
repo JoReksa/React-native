@@ -434,5 +434,6 @@ const styles = StyleSheet.create({
     color: 'darkblue',
     fontSize: 12,
     fontWeight: 'bold',
+    marginHorizontal: 5,
   },
 });
