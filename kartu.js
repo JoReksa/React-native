@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import Ico from 'react-native-vector-icons/EvilIcons';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -9,50 +9,46 @@ export default function kartu({data, deleteTodo}) {
       colors={['#7BD5F5', '#787FF6', '#4ADEDE', '#1CA7EC', '#1F2F98']}
       start={{x: 0.25, y: 0.25}}
       end={{x: 1, y: 1}}
-      style={style.grad}>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <Text
-            style={{
-              color: 'white',
-              fontFamily: 'North',
-              fontSize: 12,
-            }}>
-            {data}
-          </Text>
-        </View>
-        <View>
-          <TouchableOpacity style={style.buten2} onPress={() => deleteTodo()}>
-            <Ico name="trash" size={25} color={'white'} />
-          </TouchableOpacity>
+      style={{
+        backgroundColor: 'red',
+        flex: 0.5,
+        marginBottom: 10,
+        flexDirection: 'row',
+        borderWidth: 2,
+        borderColor: 'grey',
+        borderRadius: 10,
+        overflow: 'hidden',
+        justifyContent: 'space-between',
+      }}>
+      <View style={{}}>
+        <View style={{flexDirection: 'row'}}>
+          <Image source={{uri: data.avatar}} style={{height: 50, width: 60}} />
+          <View style={{flexDirection: 'column'}}>
+            <Text
+              style={{
+                color: 'white',
+                textAlign: 'center',
+              }}>
+              {data.todo}
+            </Text>
+            <View style={{}}>
+              <Text style={{textAlign: 'center'}}>{data.description}</Text>
+            </View>
+            <Text style={{textAlign: 'center'}}>Status: {data.status}</Text>
+          </View>
         </View>
       </View>
+
+      <TouchableOpacity
+        style={{
+          width: 50,
+          backgroundColor: 'yellow',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+        onPress={() => deleteTodo()}>
+        <Ico name="trash" size={25} color={'black'} />
+      </TouchableOpacity>
     </LinearGradient>
   );
 }
-const style = StyleSheet.create({
-  buten2: {
-    backgroundColor: 'rgba(0,0,0,0)',
-    paddingHorizontal: 5,
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: 40,
-    borderRadius: 10,
-  },
-  deletetxt: {
-    color: 'white',
-    textAlign: 'center',
-  },
-  grad: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 40,
-    flex: 1,
-    margin: 10,
-    flexDirection: 'row',
-    borderWidth: 1.5,
-    borderColor: 'white',
-    borderRadius: 10,
-    overflow: 'hidden',
-  },
-});

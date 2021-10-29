@@ -37,6 +37,10 @@
 		29EFB7E6D51A4435BE32C43E /* TahomaR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52A6B6C5454E446F8296116A /* TahomaR.ttf */; };
 		B6F2678EE76F4659B7078866 /* RobotoB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3AFFDF3E336440269E6ADF75 /* RobotoB.ttf */; };
 		5F8408C16E084FBABF614A0B /* Tbold.TTF in Resources */ = {isa = PBXBuildFile; fileRef = FD2A9609B0024451A5F6D24B /* Tbold.TTF */; };
+		196A2737A7D948C88AC0F757 /* LB900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05338F099B784914B8FEE6B1 /* LB900.ttf */; };
+		C3190FCFC67A46599D13086F /* LBT900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D2B47CEF023E4FB588536E0A /* LBT900.ttf */; };
+		475A433CF4324B90B657D082 /* R900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4EE0781A91DB425E8A2CB887 /* R900.ttf */; };
+		117BAD321B224D20B7B51B4C /* RT900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71B26FE59FCC47649580F1A0 /* RT900.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +94,10 @@
 		52A6B6C5454E446F8296116A /* TahomaR.ttf */ = {isa = PBXFileReference; name = "TahomaR.ttf"; path = "../Tahoma/TahomaR.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		3AFFDF3E336440269E6ADF75 /* RobotoB.ttf */ = {isa = PBXFileReference; name = "RobotoB.ttf"; path = "../Tahoma/RobotoB.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		FD2A9609B0024451A5F6D24B /* Tbold.TTF */ = {isa = PBXFileReference; name = "Tbold.TTF"; path = "../Tahoma/Tbold.TTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		05338F099B784914B8FEE6B1 /* LB900.ttf */ = {isa = PBXFileReference; name = "LB900.ttf"; path = "../Tahoma/LB900.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D2B47CEF023E4FB588536E0A /* LBT900.ttf */ = {isa = PBXFileReference; name = "LBT900.ttf"; path = "../Tahoma/LBT900.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4EE0781A91DB425E8A2CB887 /* R900.ttf */ = {isa = PBXFileReference; name = "R900.ttf"; path = "../Tahoma/R900.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		71B26FE59FCC47649580F1A0 /* RT900.ttf */ = {isa = PBXFileReference; name = "RT900.ttf"; path = "../Tahoma/RT900.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +230,10 @@
 				52A6B6C5454E446F8296116A /* TahomaR.ttf */,
 				3AFFDF3E336440269E6ADF75 /* RobotoB.ttf */,
 				FD2A9609B0024451A5F6D24B /* Tbold.TTF */,
+				05338F099B784914B8FEE6B1 /* LB900.ttf */,
+				D2B47CEF023E4FB588536E0A /* LBT900.ttf */,
+				4EE0781A91DB425E8A2CB887 /* R900.ttf */,
+				71B26FE59FCC47649580F1A0 /* RT900.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -346,6 +358,10 @@
 				29EFB7E6D51A4435BE32C43E /* TahomaR.ttf in Resources */,
 				B6F2678EE76F4659B7078866 /* RobotoB.ttf in Resources */,
 				5F8408C16E084FBABF614A0B /* Tbold.TTF in Resources */,
+				196A2737A7D948C88AC0F757 /* LB900.ttf in Resources */,
+				C3190FCFC67A46599D13086F /* LBT900.ttf in Resources */,
+				475A433CF4324B90B657D082 /* R900.ttf in Resources */,
+				117BAD321B224D20B7B51B4C /* RT900.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

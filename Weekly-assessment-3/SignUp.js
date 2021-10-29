@@ -3,158 +3,130 @@ import {
   View,
   Text,
   StyleSheet,
-  TouchableOpacity,
   TextInput,
+  TouchableOpacity,
+  ImageBackground,
 } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+import Ico from 'react-native-vector-icons/MaterialIcons';
+import MCL from 'react-native-vector-icons/MaterialCommunityIcons';
+import Ant from 'react-native-vector-icons/AntDesign';
+import Ent from 'react-native-vector-icons/Entypo';
+import {white} from 'react-native-paper/lib/typescript/styles/colors';
 export default function SignUp() {
   return (
-    <LinearGradient
-      colors={['#7BD5F5', '#787FF6', '#4ADEDE', '#1CA7EC', '#1F2F98']}
-      start={{x: 0.25, y: 0.25}}
-      end={{x: 1, y: 1}}
-      style={css.bg}>
-      <View
-        style={{
-          backgroundColor: 'rgba(255,255,255,0.6)',
-          position: 'absolute',
-          height: 80,
-          width: 80,
-          borderRadius: 40,
-          marginHorizontal: -15,
-          marginVertical: -15,
-        }}
-      />
-      <View
-        style={{
-          backgroundColor: 'rgba(255,255,255,0.7)',
-          position: 'absolute',
-          height: 80,
-          width: 80,
-          borderRadius: 40,
-          marginHorizontal: 300,
-          marginVertical: -15,
-        }}
-      />
-      <View
-        style={{
-          backgroundColor: 'rgba(255,255,255,0.6)',
-          position: 'absolute',
-          height: 80,
-          width: 80,
-          borderRadius: 40,
-          marginHorizontal: 295,
-          marginVertical: 555,
-        }}
-      />
-      <View
-        style={{
-          backgroundColor: 'rgba(255,255,255,0.7)',
-          position: 'absolute',
-          height: 80,
-          width: 80,
-          borderRadius: 40,
-          marginHorizontal: -15,
-          marginVertical: 555,
-        }}
-      />
-      <View style={{marginVertical: 180}}>
-        <View style={css.inti}>
-          <View style={{margin: 10}}>
-            <Text style={css.helo}>SignUp</Text>
-            <TextInput
-              style={css.email}
-              placeholder="Email"
-              placeholderTextColor="grey"
-              underlineColorAndroid="transparent"></TextInput>
-            <TextInput
-              style={css.pass}
-              placeholder="Password"
-              placeholderTextColor="grey"
-              underlineColorAndroid="transparent"></TextInput>
-            <TextInput
-              style={css.pass}
-              placeholder="RetypePassword"
-              placeholderTextColor="grey"
-              underlineColorAndroid="transparent"></TextInput>
-          </View>
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-evenly',
-              alignItems: 'center',
-            }}>
-            <TouchableOpacity style={css.butt1}>
-              <Text
-                style={{textAlign: 'center', fontSize: 14, fontWeight: '600'}}>
-                Back
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={css.butt2}>
-              <Text
-                style={{textAlign: 'center', fontSize: 14, fontWeight: '600'}}>
-                SignUp
-              </Text>
-            </TouchableOpacity>
-          </View>
+    <ImageBackground style={Sss.bg} source={require('./signup.jpg')}>
+      <Text style={Sss.head}>Sign Up</Text>
+      <View style={Sss.fill}>
+        <View style={Sss.section}>
+          <Ico
+            name="drive-file-rename-outline"
+            size={22}
+            color={'white'}
+            style={Sss.icostyle}
+          />
+          <TextInput
+            placeholder="Full Name"
+            placeholderTextColor="white"
+            style={Sss.Input}
+            underlineColorAndroid={'transparent'}
+          />
         </View>
+        <View style={Sss.section}>
+          <MCL name="email" size={22} color={'white'} style={Sss.icostyle} />
+          <TextInput
+            placeholder="Email"
+            placeholderTextColor="white"
+            style={Sss.Input}
+            underlineColorAndroid={'transparent'}
+          />
+        </View>
+        <View style={Sss.section}>
+          <Ant name="user" size={22} color={'white'} style={Sss.icostyle} />
+          <TextInput
+            placeholder="Username"
+            placeholderTextColor="white"
+            style={Sss.Input}
+            underlineColorAndroid={'transparent'}
+          />
+        </View>
+        <View style={Sss.section}>
+          <Ent name="eye" size={22} color={'white'} style={Sss.icostyle} />
+          <TextInput
+            placeholder="Password"
+            placeholderTextColor="white"
+            secureTextEntry={true}
+            style={Sss.Input}
+            underlineColorAndroid={'transparent'}
+          />
+        </View>
+        <TouchableOpacity style={Sss.btn}>
+          <Text style={Sss.txtbtn}>SignUp</Text>
+        </TouchableOpacity>
+        <Text style={{textAlign: 'center'}}>
+          Already have an Account ? <Text style={Sss.signin}>Sign In</Text>
+        </Text>
       </View>
-    </LinearGradient>
+    </ImageBackground>
   );
 }
 
-const css = StyleSheet.create({
+const Sss = StyleSheet.create({
   bg: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 50,
     height: '100%',
-    overflow: 'hidden',
-    flex: 1,
-    flexDirection: 'column',
   },
-  inti: {
-    flexDirection: 'column',
-    height: 280,
-    width: 300,
-    borderRadius: 10,
-    backgroundColor: 'rgba(255,255,255,0.7)',
+  head: {
+    fontSize: 30,
+    fontFamily: 'LBT900',
+    marginBottom: 40,
+    color: 'white',
+  },
+  Input: {
+    fontSize: 12,
+    fontFamily: 'LBT900',
+    width: '100%',
+  },
+  fill: {
+    width: '100%',
+    marginBottom: 40,
+  },
+  section: {
+    flexDirection: 'row',
+    paddingVertical: 1,
     borderWidth: 1,
-    borderColor: 'grey',
-    alignSelf: 'center',
-  },
-  helo: {
-    fontSize: 20,
-    fontFamily: 'North',
-    color: 'black',
-  },
-  butt1: {
-    height: 30,
-    backgroundColor: '#7BD5F5',
-    width: 50,
-    borderRadius: 5,
-    borderWidth: 1,
-    borderColor: 'black',
-  },
-  butt2: {
-    height: 30,
-    backgroundColor: '#7BD5F5',
-    width: 50,
-    borderRadius: 5,
-    borderWidth: 1,
-    borderColor: 'black',
-  },
-  email: {
-    textShadowRadius: 10,
-    borderWidth: 2,
-    borderRadius: 10,
+    borderColor: 'white',
     height: 40,
-    margin: 10,
-    borderColor: 'grey',
-  },
-  pass: {
-    textShadowRadius: 10,
-    borderWidth: 2,
+    margin: 5,
     borderRadius: 10,
-    height: 40,
-    margin: 10,
-    borderColor: 'grey',
+  },
+  icostyle: {
+    padding: 5,
+  },
+  txtbtn: {
+    fontFamily: 'LBT900',
+    color: 'white',
+  },
+  btn: {
+    width: '100%',
+    borderRadius: 100,
+    borderWidth: 2,
+    borderColor: 'white',
+    shadowOpacity: 1,
+    shadowColor: 'black',
+    shadowOffset: {
+      height: 1,
+      width: 1,
+    },
+    shadowRadius: 2,
+    paddingVertical: 10,
+    marginBottom: 20,
+    alignItems: 'center',
+    marginTop: 30,
+  },
+  signin: {
+    textDecorationLine: 'underline',
+    color: 'blue',
   },
 });

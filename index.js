@@ -9,4 +9,4 @@ import GopayD from './GopayD';
 import TodoApp from './TodoApp';
 import CurseMain from './Weekly-assessment-3/CurseMain';
 
-AppRegistry.registerComponent(appName, () => CurseMain);
+AppRegistry.registerComponent(appName, () => TodoApp);
